@@ -2,13 +2,13 @@ import pyautogui
 import time
 
 # Load the target doll image
-target_doll_image = r"C:\Users\thomas\Desktop\maii_game\target.png"  # Replace with the path to your specific doll image
+target_doll_image = r"target_image.png"  # Replace with the path to your specific doll image
 
 # Function to simulate finding and clicking the specific doll
 def find_and_click_doll():
     try:
         # Locate the image of the target doll on the screen
-        location = pyautogui.locateCenterOnScreen(target_doll_image)#, confidence=0.8)  # Adjust confidence as needed
+        location = pyautogui.locateCenterOnScreen(target_doll_image, confidence=0.8)  # Adjust confidence as needed
         if location:
             # Click on the target doll
             pyautogui.click(location)
